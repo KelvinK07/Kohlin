@@ -1,0 +1,11 @@
+One cannot think well, love well, sleep well, if one has not dined well.
+
+A nourished body fuels a thriving mind, a loving heart, and a restful soul—thoughts, love, and dreams flourish when the table is adorned with a well-enjoyed meal.
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+font-family: 'Cormorant Garamond', serif;
+font-family: 'Merriweather', serif;
