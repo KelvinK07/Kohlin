@@ -28,6 +28,7 @@ h3{
     font-weight: 400;
     font-size: 3rem;
     font-weight: 600;
+    color: #D4AF37;
 }
 
 /* Sub-Heading */
@@ -36,6 +37,7 @@ h2{
     font-weight: 400;
     font-size: 1.2rem;
     text-transform: uppercase;
+    color: #FFFACD;
 }
 
 /* Title */
@@ -43,6 +45,7 @@ h1{
     font-family: Cormorant Garamond;
     font-weight: 400;
     font-size: 3.5rem;
+    color: #D4AF37;
 }
 
 /* Comments Heading */
@@ -50,6 +53,7 @@ h4{
     font-family: Cormorant Garamond;
     font-weight: 600;
     font-size: 1.5rem;
+    color: #FFFFFF;
 }
 
 p{
@@ -58,12 +62,13 @@ p{
     line-height: 1.5em;
     letter-spacing: 1px;
     font-size: 1.2rem;
+    color: #FFFFFF;
+    text-align: center;
 }
 .background-image{
     width: 100%;
     height: 100%;
     position: fixed;
-    
     z-index: -5;
 }
 .background-image img{
@@ -71,14 +76,30 @@ p{
     height: 100%;
     object-fit: cover;
 }
-nav{
-    max-width: 1440px;
-    padding: 15px 30px;
-    margin: auto;
+
+.FlexDisplayRow{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+}
+.FlexDisplayCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.borderRadius40{
+    border-radius: 40px 0px 40px 0px;
+    -webkit-border-radius: 40px 0px 40px 0px;
+    -moz-border-radius: 40px 0px 40px 0px;
+    -ms-border-radius: 40px 0px 40px 0px;
+    -o-border-radius: 40px 0px 40px 0px;
+}
+
+nav{
+    max-width: 1440px;
+    padding: 15px 30px;
+    margin: auto;
 }
 
 .LogoContainer{
@@ -89,10 +110,6 @@ nav{
     height: auto;
 }
 #headerMenu{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
     width: 60%;
 }
 #headerMenu a{
@@ -111,58 +128,31 @@ nav{
     color: #D4AF37;
 }
 
-
-
 /* HERO */
-
-
 
 .hero{
     width: 100%;
     max-width: 1440px;
     margin: auto;
     padding: 100px 30px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
 }
 .HeroTextContainer{
     width: 50%;
     align-items: flex-start;
     justify-content: space-between;
 }
-.HeroTextContainer h2{
-    font-size: 1.2rem;
-    color: #FFFACD;
-}
 
-.HeroTextContainer h1{
-    font-size: 3.5rem;
-    font-weight: 600;
-    color: #D4AF37;
-}
 .HeroTextContainer p{
-    font-size: 1.2rem;
-    color: #FFFFFF;
+    text-align: left;
     
 }
-
 .HeroImageContainer{
     width: 40%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 .HeroImageContainer-Image{
     width: 100%;
     height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
-    
-    
 }
 .HeroImageContainer-Image img{
     width: 100%;
@@ -202,9 +192,6 @@ nav{
 /* CTA-BUTTON */
 
 .CTA-Button{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: center;
     gap: 40px;
 }
@@ -231,24 +218,9 @@ nav{
     -o-transition: 0.3s all ease-in-out;
 }
 .ExploreButton{
-    width: 270px;
-    padding: 20px 10px;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
+    background-color:#d4af3700;
     border: #FFFACD 3px solid ;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: #FFFACD;
-    font-size: 1.25rem;
-    transition: 0.3s all ease-in-out;
-    -webkit-transition: 0.3s all ease-in-out;
-    -moz-transition: 0.3s all ease-in-out;
-    -ms-transition: 0.3s all ease-in-out;
-    -o-transition: 0.3s all ease-in-out;
 }
 
 .ContactButton:hover{
@@ -261,27 +233,13 @@ nav{
     -o-transform: translateY(-10%);
 }
 .ExploreButton:hover{
-    background-color: #FFFACD;
-    border: #FFFACD 3px solid ;
     color: black;
-    transform: translateY(-10%);
-    -webkit-transform: translateY(-10%);
-    -moz-transform: translateY(-10%);
-    -ms-transform: translateY(-10%);
-    -o-transform: translateY(-10%);
 }
-
-
-
-
 
 /* ---- WHO ARE WE ---- */
 
 .WhoAreWe{
  position: relative;
- display: flex;
- align-items: center;
- justify-content: center;
  background-color: #1E1E1E;
 }
 .WhoAreWe img{
@@ -293,30 +251,14 @@ nav{
 .WhoAreWeContainer{
     z-index: 2;
 }
-.WhoAreWeContainer h3{
-    color: #D4AF37;
-}
-.WhoAreWeContainer h2{
-    color: #FFFACD;
-}
-.WhoAreWeContainer p{
-    color: #FFFFFF;
-    text-align: center;
-}
+
 
 
 /* ---- OUR VALUE ---- */
 
-.OurValue{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .OurValueContainer{
     flex-direction: row;
     justify-content: space-between;
-    
 }
 
 .OurValueContainerText{
@@ -327,14 +269,8 @@ nav{
     gap: 40px;
 
 }
-.OurValueContainerText h2{
-    color: #FFFACD;
-}
-.OurValueContainerText h3{
-    color: #D4AF37;
-}
 .OurValueContainerText p{
-    color: #FFFFFF;
+    text-align: left;
 }
 
 .OurValueContainerImage{
@@ -383,20 +319,6 @@ nav{
 
 /* ---- MENU ----  */
 
-
-
-
-
-
-
-.Menu{
- display: flex;
- align-items: center;
- justify-content: center;
-}
-
-
-
 .MenuContainer{
     width: 100%;
     background-color: #1E1E1E;
@@ -406,25 +328,6 @@ nav{
     padding: 100px 100px;
     gap: 40px;
     z-index: 1;
-    border-radius: 40px 0px 40px 0px;
-    -webkit-border-radius: 40px 0px 40px 0px;
-    -moz-border-radius: 40px 0px 40px 0px;
-    -ms-border-radius: 40px 0px 40px 0px;
-    -o-border-radius: 40px 0px 40px 0px;
-}
-
-.MenuContainer h2{
-    color: #FFFACD;
-    z-index: 3;
-}
-.MenuContainer h3{
-    color: #D4AF37;
-    z-index: 3;
-}
-.MenuContainer p{
-    color: #FFFFFF;
-    text-align: center;
-    z-index: 3;
 }
 
 .MenuContainerImage{
@@ -474,15 +377,8 @@ nav{
 
 .MenuContainerImage-1{
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    
-    
+    gap: 20px; 
 }
-
-
 
 .MenuContainerImage-1-big{
     width: 50%;
@@ -513,9 +409,6 @@ nav{
 
 .MenuContainerImage-2{
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 20px;
     position: relative;
 }
@@ -540,18 +433,11 @@ nav{
     flex-grow: 1;
 }
 
-
-
-
-
 /* --------WhoAreWeCTA----- */
 
 
 .WhoAreWeCTA{
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: #1E1E1E;
 }
 .WhoAreWeCTA img{
@@ -561,43 +447,15 @@ nav{
     z-index: 1;
 }
 
-
-
-
-
 /* --------Review----- */
 
-
-
-
-
-
 .Review{
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: #1E1E1E;
     z-index: -2;
 }
 
-.ReviewContainer p{
-    color: #FFFFFF;
-    text-align: center;
-}
-.ReviewContainer h2{
-    color: #FFFACD;
-}
-.ReviewContainer h3{
-    color: #D4AF37;
-}
-
-
 .ReviewComments{
     padding: 40px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
     width: 100%;
     gap: 40px;
 }
@@ -611,11 +469,6 @@ nav{
     position: relative;
     gap: 20px;
     flex-grow: 1;
-    border-radius: 40px 0px 40px 0px;
-    -webkit-border-radius: 40px 0px 40px 0px;
-    -moz-border-radius: 40px 0px 40px 0px;
-    -ms-border-radius: 40px 0px 40px 0px;
-    -o-border-radius: 40px 0px 40px 0px;
     z-index: 2;
 }
 .CommentsCard h4{
@@ -629,9 +482,6 @@ nav{
     text-align: left;
     font-weight: 400;
 }
-
-
-
 
 .CommentsCard::before{
     content: "";
@@ -649,61 +499,29 @@ nav{
     -o-border-radius: 40px 0px 40px 0px;
 }
 
-
-
-
-
-
-
-
-
 /* ---------WHY KOHLIN--------- */
 
 .WhyKohlin{
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     padding: 100px 30px;
 }
 .WhyKohlinContainer{
     background-color: #ffffff10;
     padding: 100px 100px;
-    border-radius: 40px 0px 40px 0px;
-    -webkit-border-radius: 40px 0px 40px 0px;
-    -moz-border-radius: 40px 0px 40px 0px;
-    -ms-border-radius: 40px 0px 40px 0px;
-    -o-border-radius: 40px 0px 40px 0px;
 }
-.WhyKohlinContainer h2{
-    color: #FFFACD;
-}
-.WhyKohlinContainer h3{
-    color: #D4AF37;
-}
-
 .WhyKohlinImage{
     width: 100%;
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     position: relative;
     gap: 20px;
 }
 .WhyKohlinImageContainer{
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
     gap: 20px;
 }
 .WhyKohlinImageContainer-Medium{
     width: 50%;
-    display: flex;
     align-items: flex-end;
-    justify-content: center;
     position: relative;
     flex-grow: 1;
 }
@@ -762,32 +580,17 @@ nav{
 
 .Gallery{
     width: 100%;
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     background-color: #1E1E1E;
 }
-.GalleryContainer h2{
-    color: #FFFACD;
-}
-.GalleryContainer h3{
-    color: #D4AF37;
-}
-.GalleryContainer p{
-    color: #FFFFFF;
-    text-align: center;
-}
+
 .GalleryContainerImage{
     width: 100%;
-    display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
     gap: 40px;
 }
 .GalleryContainerImage img{
-    width: 30%;
+    width: 25%;
     height: 500px;
     object-fit: cover;
 }
@@ -816,8 +619,6 @@ nav{
     -o-transform: translateY(10px);
 }
 
-
-
 .WhoAreWeCTA2{
     background-color: #ffffff00;
 }
@@ -828,9 +629,6 @@ nav{
 
 .Footer{
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 .FooterContainer{
     flex-direction: row;
@@ -849,17 +647,12 @@ nav{
 
 .FooterNavText{
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
+    gap: 20px;
     
 }
-
 .FooterNavText-Container{
     flex-grow: 1;
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -871,30 +664,12 @@ nav{
     color: #FFFFFF;
 }
 .FooterNavText-Container i{
-    font-size: 1.2rem;
     color: #FFFFFF;
 }
-.FooterNavText-Container h2{
-    color: #D4AF37;
-    font-size: 1.5rem;
-}
-
-
-
-
-
-
-
-
 .FooterContent{
     width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     gap: 40px;
 }
-
-
 .FooterContent-Text{
     width: 60%;
     display: flex;
@@ -914,23 +689,13 @@ nav{
     color: #D4AF37;
     text-align: right;
 }
-
-
-
 .FooterContent-Image{
     width: 40%;
     position: relative;
 }
-
 .FooterContent-Image img{
     width: 100%;
-    border-radius: 40px 0px 40px 0px;
-    -webkit-border-radius: 40px 0px 40px 0px;
-    -moz-border-radius: 40px 0px 40px 0px;
-    -ms-border-radius: 40px 0px 40px 0px;
-    -o-border-radius: 40px 0px 40px 0px;
 }
-
 .FooterContent-Image::before{
     content: "";
     position: absolute;
@@ -950,4 +715,8 @@ nav{
     z-index: -1;
     top: -10px;
     right: -10px;
+}
+.iconTextGroup{
+    gap: 20px;
+    justify-content: center;
 }
