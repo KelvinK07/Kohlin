@@ -1,3 +1,6 @@
+html{
+    overflow-x: hidden;
+}
 *{
     margin: 0;
     padding: 0;
@@ -9,6 +12,7 @@
 body{
     width: auto;
     position: relative;
+    overflow-x: hidden;
 }
 
 .defaultSectionStyle{
@@ -100,7 +104,86 @@ nav{
     max-width: 1440px;
     padding: 15px 30px;
     margin: auto;
+    overflow-x: hidden !important;
+    
 }
+
+/* Toggle Menu */
+
+.toggleMenu{
+    z-index: 3;
+    height: 30px;
+    width: 40px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+}
+.toggleMenu input{
+    position: absolute;
+    opacity: 0;
+    width: 40px;
+    height: 30px;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    z-index: 5;
+}
+.toggleMenu span{
+    width: 40px;
+    height: 4px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    background-color: #FFFACD;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+.toggleMenu span:nth-child(2){
+    transform-origin: 0 0;
+}
+.toggleMenu input:checked ~ span:nth-child(2){
+    transform: translate(6px,-1px) rotate(45deg) ;
+    -webkit-transform: translate(6px,-1px) rotate(45deg) ;
+    -moz-transform: translate(6px,-1px) rotate(45deg) ;
+    -ms-transform: translate(6px,-1px) rotate(45deg) ;
+    -o-transform: translate(6px,-1px) rotate(45deg) ;
+}
+.toggleMenu span:nth-child(4){
+    transform-origin: 0 100%;
+}
+.toggleMenu input:checked ~ span:nth-child(4){
+    transform: translate(6px,1px) rotate(-45deg) ;
+    -webkit-transform: translate(6px,1px) rotate(-45deg) ;
+    -moz-transform: translate(6px,1px) rotate(-45deg) ;
+    -ms-transform: translate(6px,1px) rotate(-45deg) ;
+    -o-transform: translate(6px,1px) rotate(-45deg) ;
+}
+.toggleMenu input:checked ~ span:nth-child(3){
+    opacity: 0%;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+}
+
+.navSlide{
+    transform: translateX(0) !important;
+    -webkit-transform: translateX(0) !important;
+    -moz-transform: translateX(0) !important;
+    -ms-transform: translateX(0) !important;
+    -o-transform: translateX(0) !important;
+    opacity: 1 !important;
+}
+
+/* ----------- */
 
 .LogoContainer{
     width: 270px;
@@ -719,4 +802,536 @@ nav{
 .iconTextGroup{
     gap: 20px;
     justify-content: center;
+}
+
+
+
+/* -------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+-------------------------------TABLET---------------------------------------
+----------------------------------------------------------------------------
+---------------------------------------------------------------------------- */
+
+
+
+@media screen and (max-width:768px) {
+    .defaultSectionStyle{
+        padding: 50px 20px;
+    }
+    /* Heading */
+    h3{
+        font-size: 2.7rem;
+        text-align: center;
+    }
+
+    /* Sub-Heading */
+    h2{
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    /* Title */
+    h1{
+        font-size: 3.2rem;
+        text-align: center;
+    }
+
+    /* Comments Heading */
+    h4{     
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    p{
+        font-family: urbanist;
+        font-weight: 100;
+        line-height: 1.5em;
+        letter-spacing: 1px;
+        font-size: 0.9rem;
+        color: #FFFFFF;
+        text-align: center;
+    }
+
+    /* ------------navigator--------- */
+    
+    .LogoContainer{
+        width: 180px;
+    }
+    #headerMenu{
+        width: 70%;
+    }
+    #headerMenu li{
+        font-size: 0.9rem;
+    }
+
+    /* ------------ HERO ------------ */
+
+    .hero{
+        flex-direction: column-reverse;
+        padding: 50px 30px;
+    }
+    .HeroTextContainer{
+        width: 100%;
+        align-items: center;
+    }
+    .HeroTextContainer p{
+        text-align: center;
+    }
+    .HeroImageContainer{
+        width: 90%;
+    }
+
+    /* ------------CTA-BUTTON----------------- */
+
+    .ContactButton{
+        width: 250px;
+        font-size: 0.95rem;
+    }
+
+    /* -------------OUR VALUE----------------- */
+
+    .OurValueContainer{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .OurValueContainerText{
+        width: 100%;
+        align-items: center;
+
+    }
+    .OurValueContainerText p{
+        text-align: center;
+    }
+
+    .OurValueContainerImage{
+        width: 60%; 
+    }
+
+    .OurValueContainerImage-Img img{
+        border-radius: 100px 0px 100px 0px;
+        -webkit-border-radius: 100px 0px 100px 0px;
+        -moz-border-radius: 100px 0px 100px 0px;
+        -ms-border-radius: 100px 0px 100px 0px;
+        -o-border-radius: 100px 0px 100px 0px;
+    }
+
+    /* -------------MENU--------------  */
+
+    .MenuContainer{
+        padding: 50px 50px;
+    }
+
+    .MenuContainerImage::before{
+        width: 150px;
+        height: 150px;
+    }
+
+    
+
+    /* --------Review----- */
+
+
+    .ReviewComments{
+        flex-direction: column;
+    }
+
+    .CommentsCard{
+        width: 80%;
+    }
+    .CommentsCard h4{
+        text-align: left;
+    }
+    /* ---------WHY KOHLIN--------- */
+
+    .WhyKohlin{
+        padding: 50px 30px;
+    }
+    .WhyKohlinContainer{
+        padding: 50px 30px;
+    }
+    .WhyKohlinImageContainerText{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .WhyKohlinImageContainerText h4{
+        font-size: 1.2rem;
+    }
+    .WhyKohlinImageContainer-Big{
+        width: 55%;
+    }
+    .WhyKohlinImageContainer-Small{
+        width: 45%;
+    }
+
+    /* -----------GALLERY----------------- */
+
+    .GalleryContainerImage{
+        gap: 20px;
+    }
+    .GalleryContainerImage img{
+        width: 25%;
+        height: 300px;
+        object-fit: cover;
+    }
+    .GalleryContainerImage i{
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+    /* --------Footer----------- */
+
+    .FooterContainer{
+        flex-direction: column;
+    }
+    .FooterNav{
+        width: 100%;
+        
+    }
+    .FooterNav img{
+        width: 40%;
+    }
+
+    .FooterNavText{
+        width: 100%;
+        gap: 20px;
+        
+    }
+
+    .FooterNavText-Container h4{
+        text-align: left;
+    }
+    
+    .FooterContent{
+        width: 100%;
+        gap: 40px;
+        flex-direction: row-reverse;
+    }
+    .FooterContent-Text{
+        align-items: flex-start;
+    }
+    .FooterContent-Text h4{
+        text-align: left;
+        font-size: 2.2rem;
+    }
+
+    
+}
+
+/* -------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+-------------------------------MOBILE---------------------------------------
+----------------------------------------------------------------------------
+---------------------------------------------------------------------------- */
+
+
+
+@media screen and (max-width:425px) {
+
+    .defaultSectionStyle{
+        padding: 30px 20px;
+    }
+    /* Heading */
+    h3{
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    /* Sub-Heading */
+    h2{
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    /* Title */
+    h1{
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    /* Comments Heading */
+    h4{     
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    p{
+        font-family: urbanist;
+        font-weight: 100;
+        line-height: 1.5em;
+        letter-spacing: 1px;
+        font-size: 0.9rem;
+        color: #FFFFFF;
+        text-align: center;
+    }
+    /* NAV */
+    .toggleMenu{
+        display: flex;
+    }
+    #headerMenu{
+        width: 200px;
+        flex-direction: column ;
+        padding: 100px 20px 30px 20px;
+        gap: 20px;
+        background-color: rgba(0, 0, 0, 0.6);
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 3;
+        align-items: flex-start;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        -moz-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        -o-transform: translateX(100%);
+        opacity: 0;
+}
+
+
+    /* HERO */
+    .hero{
+        gap: 20px;
+    }
+    .HeroTextContainer{
+        align-items: flex-start;
+        padding: 0px;
+    }
+    .HeroTextContainer h1{
+        text-align: left;
+    }
+    .HeroTextContainer h2{
+        text-align: left;
+    }
+    .HeroTextContainer p{
+        text-align: left;
+    }
+    .HeroImageContainer{
+        width: 100%;
+    }
+    .HeroImageContainer-Image{
+        height: 300px;
+    }
+    .HeroImageContainer-Image img{
+        height: 300px;
+        border-radius: 100px 0px 100px 0px;
+        -webkit-border-radius: 100px 0px 100px 0px;
+        -moz-border-radius: 100px 0px 100px 0px;
+        -ms-border-radius: 100px 0px 100px 0px;
+        -o-border-radius: 100px 0px 100px 0px;
+    }
+
+    .HeroImageContainer-Image::before{
+        bottom: -10px;
+        left: -10px;
+    }
+
+    .HeroImageContainer-Image::after{
+        top: -10px;
+        right: -10px;
+    }
+
+    /* CTA-BUTTON */
+
+    .CTA-Button{
+        flex-direction: column;
+        justify-content: stretch;
+        gap: 20px;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .ContactButton{
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    
+    /* -------------OUR VALUE----------------- */
+
+
+    .OurValueContainerText{
+        width: 100%;
+        align-items: flex-start;
+
+    }
+    .OurValueContainerText h3{
+        text-align: left;
+    }
+    .OurValueContainerText p{
+        text-align: left;
+    }
+
+    .OurValueContainerImage{
+        width: 70%; 
+    }
+
+    /* ---- MENU ----  */
+
+    .MenuContainer{
+        padding: 50px 20px;
+    }
+
+    .MenuContainerImage::before{
+        width: 0px;
+    }
+    .MenuContainerImage::before{
+        width: 0px;
+
+    }
+    .MenuContainerImage::after{
+        width: 0px;
+    }
+    .MenuContainerImage-1-small::before{
+        width: 0px;
+    }
+
+    .MenuContainerImage-1-big{
+        width: 100%;
+    }
+
+    .MenuContainerImage-1-big img{
+        border-radius: 0px 0px 0px 0px;
+        -webkit-border-radius: 0px 0px 0px 0px;
+        -moz-border-radius: 0px 0px 0px 0px;
+        -ms-border-radius: 0px 0px 0px 0px;
+        -o-border-radius: 0px 0px 0px 0px;
+}
+    .MenuContainerImage-1-small{
+        display: none;
+    }
+    .MenuContainerImage-2{
+        display: none;
+    }
+
+    /* --------Review----- */
+
+
+    .ReviewComments{
+        padding: 0px;
+    }
+
+    .CommentsCard{
+        width: 100%;
+    }
+
+    /* ---------WHY KOHLIN--------- */
+
+    .WhyKohlin{
+        padding: 50px 10px;
+    }
+    .WhyKohlinContainer{
+        padding: 10px 20px;
+    }
+    .WhyKohlinImageContainer{
+        width: 100%;
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .WhyKohlinImageContainer-Medium{
+        width: 100%;
+        align-items: flex-end;
+        position: relative;
+        flex-grow: 1;
+    }
+    .WhyKohlinImageContainer-Medium img{
+        width: 100%;
+        height: 200px;
+    }
+    .WhyKohlinImageContainerText{
+        padding: 20px;
+        width: 100%;
+        height: 20%;
+        background-color: rgba(0, 0, 0,0.8);
+        position: absolute;
+    }
+    .WhyKohlinImageContainerText h4{
+        color: #D4AF37;
+        font-size: 1rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .WhyKohlinImageContainer-Full{
+        width: 100%;
+    }
+    .WhyKohlinImageContainer-Big{
+        width: 100%;
+    }
+    .WhyKohlinImageContainer-Small{
+        width: 100%;
+    }
+
+    .WhyKohlinImage::before{
+        width: 0px;
+    }
+    .WhyKohlinImage::after{
+        width: 0px;
+    }
+    /* -----------GALLERY----------------- */
+
+    .Gallery{
+        width: 100%;
+        flex-direction: column;
+        background-color: #1E1E1E;
+    }
+
+    .GalleryContainerImage{
+        width: 100%;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .GalleryContainerImage img{
+        width: 90%;
+        height: 250px;
+        object-fit: cover;
+    }
+    .GalleryContainerImage i{
+        display: none;
+    }
+
+    /* --------------Footer--------------- */
+    .FooterContainer{
+        flex-direction: column;
+    }
+
+    .FooterNav img{
+        width: 60%;
+    }
+    
+    .FooterNavText{
+        flex-direction: column;
+    }
+    
+    .FooterContent{
+        flex-direction: column-reverse;
+    }
+    .FooterContent-Text{
+        width: 100%;
+    }
+    .FooterContent-Text h4{
+        text-align: center;
+    }
+    .FooterContent-Text p{
+        text-align: right;
+    }
+    .FooterContent-Image{
+        width:90%;
+    }
+    .FooterContent-Image img{
+        width: 100%;
+    }
+    .FooterContent-Image::before{
+        width: 0;
+    }
+    .FooterContent-Image::after{
+        width: 0;
+    }
+
 }
