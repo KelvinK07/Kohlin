@@ -25,7 +25,6 @@ body{
     padding: 100px 30px;
     gap: 40px;
 }
-
 /* Heading */
 h3{
     font-family: Cormorant Garamond;
@@ -211,6 +210,14 @@ nav{
     color: #D4AF37;
 }
 
+/* About HERO */
+.abouthero{
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+    padding: 100px 30px;
+}
+
 /* HERO */
 
 .hero{
@@ -375,7 +382,7 @@ nav{
     bottom: -15px;
     background-color: #FFFACD;
     position: absolute;
-    z-index: -1;
+    z-index: 0;
 }
 .OurValueContainerImage-Img::after{
     content: "";
@@ -385,7 +392,7 @@ nav{
     right: -15px;
     background-color: #FFFACD;
     position: absolute;
-    z-index: -1;
+    z-index: 0;
 }
 
 .OurValueContainerImage-Img img{
@@ -396,6 +403,7 @@ nav{
     -moz-border-radius: 170px 0px 170px 0px;
     -ms-border-radius: 170px 0px 170px 0px;
     -o-border-radius: 170px 0px 170px 0px;
+    z-index: 3;
 }
 
 
@@ -895,7 +903,6 @@ nav{
         flex-direction: column;
         justify-content: space-between;
     }
-
     .OurValueContainerText{
         width: 100%;
         align-items: center;

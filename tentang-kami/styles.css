@@ -1,0 +1,29 @@
+.rightImage{
+    flex-direction: row-reverse;
+}
+
+.withbackground{
+    background-color: #1E1E1E;
+}
+.withoutbackground{
+    background-color: #1e1e1e00;
+}
+.OurValueContainerImage-Img img{
+    height: 500px;
+    object-fit: cover;
+}
+
+@media screen and (max-width:768px) {
+    .OurValueContainer{
+        flex-direction: column;
+    }
+    .OurValueContainerImage-Img img{
+        height: 400px;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .OurValueContainerImage-Img img{
+        height: 300px;
+    }
+}
