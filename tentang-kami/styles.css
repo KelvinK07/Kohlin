@@ -22,7 +22,7 @@
     }
 }
 
-@media screen and (max-width:425px) {
+@media screen and (max-width:435px) {
     .OurValueContainerImage-Img img{
         height: 300px;
     }
