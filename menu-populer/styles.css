@@ -1,0 +1,84 @@
+.rightImage{
+    flex-direction: row-reverse;
+}
+.rightText h3{
+    text-align: right;
+}
+.rightText p{
+    text-align: right;
+}
+.rightText{
+    align-items: flex-end;
+    
+}
+.withbackground{
+    background-color: #1E1E1E;
+}
+.withoutbackground{
+    background-color: #1e1e1e00;
+}
+.OurValueContainerImage-Img{
+    height: 100%;
+}
+.OurValueContainerImage-Img img{
+    height: 500px;
+    object-fit: cover;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+
+
+.OurValueContainerImage-Img::before{
+    height: 100%;
+    bottom: 0px;
+}
+
+.OurValueContainerImage-Img::after{
+    height: 100%;
+    top: 0px;
+}
+
+.hero{
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    padding: 0;
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    
+}
+.hero span{
+    width: 60%;
+    height: 40%;
+    position: absolute;
+    background-color: #1e1e1e8a;
+    z-index: -1;
+}
+.hero img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+@media screen and (max-width:768px) {
+    .OurValueContainer{
+        flex-direction: column;
+    }
+    .OurValueContainerImage-Img img{
+        height: 400px;
+    }
+}
+
+@media screen and (max-width:435px) {
+    .OurValueContainerImage-Img img{
+        height: 300px;
+    }
+}
+
