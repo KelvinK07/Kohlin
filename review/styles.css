@@ -1,0 +1,13 @@
+.ReviewComments{
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+}
+/* .CommentsCard{
+    width: 400px;
+    height: 300px;
+} */
+.commentsContainer{
+    gap: 0px;
+}
